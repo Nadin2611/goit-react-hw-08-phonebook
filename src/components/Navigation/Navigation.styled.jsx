@@ -12,3 +12,9 @@ export const Link = styled(NavLink)`
     color: #e84a5f;
   }
 `;
+
+export const ContainerIcon = styled.div`
+  display: flex;
+  align-item: center;
+  gap: 4px;
+`;

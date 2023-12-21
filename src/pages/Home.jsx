@@ -1,26 +1,15 @@
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+import { LinkStyled, Text, Title, WrapperBox } from './slyles/Home.styled';
 
 export default function Home() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
-        Task manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <WrapperBox>
+      <Title>Welcome to the Phonebook</Title>
+      <Text>This is a simple application to manage your contacts.</Text>
+      <Text>
+        Please <LinkStyled to="/register">register</LinkStyled> or{' '}
+        <LinkStyled to="/login">log in</LinkStyled> to start using the
+        application.
+      </Text>
+    </WrapperBox>
   );
 }

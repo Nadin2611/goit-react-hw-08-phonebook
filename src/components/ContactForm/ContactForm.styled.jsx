@@ -37,6 +37,9 @@ export const AddButton = styled.button`
   padding: ${props => props.theme.spacing(3)};
   border: 1px solid ${props => props.theme.colors.green};
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   box-shadow: ${props => props.theme.shadows.green};
   background: ${props => props.theme.background.greenBtn};
 

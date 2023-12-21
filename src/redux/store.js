@@ -17,7 +17,7 @@ import { authReducer } from './auth/slice';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  wgitelist: ['token'],
+  wgitelist: ['token', 'user'],
 };
 
 export const store = configureStore({

@@ -1,5 +1,7 @@
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { useAuth } from '../../hooks/useAuth';
-import { Link } from './Navigation.styled';
+import { ContainerIcon, Link } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
@@ -8,8 +10,20 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
-      {isLoggedIn && <Link to="/contacts">Phonebook</Link>}
+      <Link to="/">
+        <ContainerIcon>
+          <HomeOutlinedIcon />
+          Home
+        </ContainerIcon>
+      </Link>
+
+      {isLoggedIn && (
+        <Link to="/contacts">
+          <ContainerIcon>
+            <PhoneIphoneIcon /> Phonebook
+          </ContainerIcon>
+        </Link>
+      )}
     </nav>
   );
 };

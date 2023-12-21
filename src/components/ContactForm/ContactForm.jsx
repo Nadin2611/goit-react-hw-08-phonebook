@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
 
@@ -80,7 +81,9 @@ export const ContactForm = () => {
         </Label>
       </FormContainer>
 
-      <AddButton type="submit">Add Contact</AddButton>
+      <AddButton type="submit">
+        Add Contact <PersonAddAltIcon />
+      </AddButton>
     </Form>
   );
 };

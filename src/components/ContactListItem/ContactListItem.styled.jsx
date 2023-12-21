@@ -37,6 +37,9 @@ export const DeleteButton = styled.button`
   border: 1px solid ${props => props.theme.colors.pink};
   box-shadow: ${props => props.theme.shadows.red};
   background: ${props => props.theme.background.redBtn};
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
   &:hover {
     color: ${props => props.theme.colors.white};
