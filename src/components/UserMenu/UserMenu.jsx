@@ -1,5 +1,5 @@
 import { Wrapper, UserName } from './UserMenu.styled';
-import { LoginButton } from 'components/LoginForm/LoginForm.styled';
+import { LoginOutButton } from 'components/UserMenu/UserMenu.styled';
 import { useAuth } from '../../hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
@@ -11,9 +11,9 @@ export const UserMenu = () => {
   return (
     <Wrapper>
       <UserName>Welcome, {user.name}</UserName>
-      <LoginButton type="button" onClick={() => dispatch(logOut())}>
+      <LoginOutButton type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </LoginButton>
+      </LoginOutButton>
     </Wrapper>
   );
 };

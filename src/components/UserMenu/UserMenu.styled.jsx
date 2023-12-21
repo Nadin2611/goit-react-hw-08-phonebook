@@ -9,3 +9,14 @@ export const Wrapper = styled.div`
 export const UserName = styled.p`
   font-weight: 700;
 `;
+
+export const LoginOutButton = styled.button`
+  font-size: ${props => props.theme.fontSizes.xs};
+  border-radius: ${props => props.theme.spacing(1)};
+  padding: ${props => props.theme.spacing(2)};
+  border: 1px solid ${props => props.theme.colors.green};
+  margin: 0 auto;
+
+  &:hover {
+  }
+`;
