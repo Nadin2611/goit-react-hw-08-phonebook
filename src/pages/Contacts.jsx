@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
+
 import { Container } from 'components/Container.styled';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
@@ -19,9 +19,8 @@ export default function Contacts() {
 
   return (
     <Container>
-      <Helmet>
-        <title>Contacts</title>
-      </Helmet>
+      <title>Contacts</title>
+
       <ContactForm></ContactForm>
       {isLoading && !error && <b> Request in progress...</b>}
       <Filter></Filter>
