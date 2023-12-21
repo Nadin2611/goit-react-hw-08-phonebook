@@ -20,14 +20,14 @@ export const ContactList = () => {
 
   return (
     <List>
-      {filteredContacts.map(({ id, name, phone }) => (
+      {filteredContacts.map(({ id, name, number }) => (
         <ContactListItem
           key={id}
           name={name}
-          number={phone}
+          number={number}
           onDelete={() => handleDelete(id)}
         >
-          {name} {phone}
+          {name} {number}
         </ContactListItem>
       ))}
     </List>

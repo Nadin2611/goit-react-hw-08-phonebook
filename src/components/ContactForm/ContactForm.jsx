@@ -14,7 +14,7 @@ import {
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-  const [formContact, setFormContact] = useState({ name: '', phone: '' });
+  const [formContact, setFormContact] = useState({ name: '', number: '' });
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -45,7 +45,7 @@ export const ContactForm = () => {
   };
 
   const reset = () => {
-    setFormContact({ name: '', phone: '' });
+    setFormContact({ name: '', number: '' });
   };
 
   return (
@@ -70,7 +70,7 @@ export const ContactForm = () => {
           Number
           <Input
             type="tel"
-            name="phone"
+            name="number"
             value={formContact.phone}
             onChange={handleChange}
             required

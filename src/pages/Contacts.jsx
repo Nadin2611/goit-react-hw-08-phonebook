@@ -8,7 +8,7 @@ import { Filter } from 'components/Filter/Filter';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading, selectError } from '../redux/contacts/selectors';
 
-export const App = ({ contacts }) => {
+export default function Contacts({ contacts }) {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -30,4 +30,4 @@ export const App = ({ contacts }) => {
       </Container>
     </>
   );
-};
+}
