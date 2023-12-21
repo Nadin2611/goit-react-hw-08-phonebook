@@ -12,9 +12,9 @@ import { logIn } from '../../redux/auth/operations';
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.currentTarget;
     dispatch(
       logIn({
         email: form.elements.email.value,

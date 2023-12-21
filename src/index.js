@@ -11,15 +11,15 @@ import { store, persistor } from './redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/goit-react-hw-08-phonebook">
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Provider store={store}>
+    <Provider store={store}>
+      <BrowserRouter basename="/goit-react-hw-08-phonebook">
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
           <PersistGate loading={null} persistor={persistor}>
             <App />
           </PersistGate>
-        </Provider>
-      </ThemeProvider>
-    </BrowserRouter>
+        </ThemeProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
