@@ -30,14 +30,14 @@ export const LoginForm = () => {
         <FormContainer>
           <Label>
             Email
-            <Input type="email" name="email" />
+            <Input type="email" name="email" required />
           </Label>
         </FormContainer>
 
         <FormContainer>
           <Label>
             Password
-            <Input type="password" name="password" />
+            <Input type="password" name="password" required />
           </Label>
         </FormContainer>
 
