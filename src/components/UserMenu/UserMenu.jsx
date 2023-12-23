@@ -9,7 +9,7 @@ import { ContainerIcon } from 'components/Navigation/Navigation.styled';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
-  console.log(user);
+
   return (
     <Wrapper>
       <UserName>
