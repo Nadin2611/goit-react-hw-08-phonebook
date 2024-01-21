@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import { Wrapper, UserName } from './UserMenu.styled';
 import { LoginOutButton } from 'components/UserMenu/UserMenu.styled';
@@ -9,16 +10,17 @@ import { ContainerIcon } from 'components/Navigation/Navigation.styled';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
+  const { t } = useTranslation();
 
   return (
     <Wrapper>
       <UserName>
         <ContainerIcon>
-          Welcome, {user && user.name} <AccountCircleOutlinedIcon />
+          {t('welcome')}, {user && user.name} <AccountCircleOutlinedIcon />
         </ContainerIcon>
       </UserName>
       <LoginOutButton type="button" onClick={() => dispatch(logOut())}>
-        Logout
+        {t('logOut')}
       </LoginOutButton>
     </Wrapper>
   );

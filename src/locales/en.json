@@ -1,0 +1,20 @@
+{
+  "welcome": "Welcome to the Phonebook",
+  "home": "Home",
+  "appDescription": "This is a simple application to manage your contacts",
+  "please": "Please",
+  "register": "register",
+  "register1": "Register",
+  "or": "or",
+  "logIn": "log in",
+  "logIn1": "Log in",
+  "logOut": "Logout",
+  "toStartUsingTheApplication": "to start using the application.",
+  "welcomeBack": "Welcome back",
+  "youAreLoggedIn": "You are logged in.",
+  "exploreYour": "Explore your",
+  "phonebook": "phonebook",
+  "delete": "Delete",
+  "edit": "Edit",
+  "deleteContact": "Are you sure you want to delete this contact?"
+}

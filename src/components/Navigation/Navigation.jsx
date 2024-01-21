@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { useAuth } from '../../hooks/useAuth';
@@ -5,15 +6,14 @@ import { ContainerIcon, Link } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
-
-  console.log(isLoggedIn);
+  const { t } = useTranslation();
 
   return (
     <nav>
       <Link to="/">
         <ContainerIcon>
           <HomeOutlinedIcon />
-          Home
+          {t('home')}
         </ContainerIcon>
       </Link>
 

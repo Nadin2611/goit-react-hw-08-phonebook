@@ -1,22 +1,26 @@
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../hooks/useAuth';
 import { LinkStyled, Text, Title, WrapperBox } from './slyles/Home.styled';
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
+  const { t } = useTranslation();
+
   return (
     <WrapperBox>
-      <Title>Welcome to the Phonebook</Title>
-      <Text>This is a simple application to manage your contacts.</Text>
+      <Title>{t('welcome')}</Title>
+      <Text>{t('appDescription')}.</Text>
       {!isLoggedIn ? (
         <Text>
-          Please <LinkStyled to="/register">register</LinkStyled> or{' '}
-          <LinkStyled to="/login">log in</LinkStyled> to start using the
-          application.
+          {t('please')} <LinkStyled to="/register">{t('register')}</LinkStyled>{' '}
+          {t('or')} <LinkStyled to="/login">{t('logIn')}</LinkStyled>{' '}
+          {t('toStartUsingTheApplication')}
         </Text>
       ) : (
         <Text>
-          Welcome back, {user && user.name}! You are logged in. <br />
-          Explore your <LinkStyled to="/contacts">phonebook</LinkStyled>.
+          {t('welcomeBack')},{user && user.name}! {t('youAreLoggedIn')} <br />
+          {t('exploreYour')}{' '}
+          <LinkStyled to="/contacts">{t('phonebook')}</LinkStyled>
         </Text>
       )}
     </WrapperBox>

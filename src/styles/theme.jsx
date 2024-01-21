@@ -39,4 +39,16 @@ export const theme = Object.freeze({
   animation: {
     cubicBezier: '0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
   },
+  buttonAnimations: {
+    pulse: {
+      keyframes: `
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      `,
+      duration: '0.6s',
+      timingFunction: 'ease-in-out',
+      iterationCount: 'infinite',
+    },
+  },
 });

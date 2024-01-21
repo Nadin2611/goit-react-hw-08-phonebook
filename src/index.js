@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import i18n from './i18n';
 import { App } from 'components/App';
 import { GlobalStyle } from 'styles/GlobalStyles';
 import { theme } from 'styles/theme';
@@ -23,3 +24,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
   </React.StrictMode>
 );
+
+i18n.init();
