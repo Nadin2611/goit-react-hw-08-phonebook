@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
@@ -14,6 +15,7 @@ import {
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const contacts = useSelector(selectContacts);
   const [formContact, setFormContact] = useState({ name: '', number: '' });
 
@@ -53,7 +55,7 @@ export const ContactForm = () => {
     <Form onSubmit={handleSubmit}>
       <FormContainer>
         <Label>
-          Name
+          {t('name')}
           <Input
             type="text"
             name="name"
@@ -68,7 +70,7 @@ export const ContactForm = () => {
 
       <FormContainer>
         <Label>
-          Number
+          {t('number')}
           <Input
             type="tel"
             name="number"
@@ -82,7 +84,7 @@ export const ContactForm = () => {
       </FormContainer>
 
       <AddButton type="submit">
-        Add Contact <PersonAddAltIcon />
+        {t('addContact')} <PersonAddAltIcon />
       </AddButton>
     </Form>
   );

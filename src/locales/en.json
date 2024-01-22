@@ -5,6 +5,7 @@
   "please": "Please",
   "register": "register",
   "register1": "Register",
+  "register2": "Register",
   "or": "or",
   "logIn": "log in",
   "logIn1": "Log in",
@@ -14,7 +15,15 @@
   "youAreLoggedIn": "You are logged in.",
   "exploreYour": "Explore your",
   "phonebook": "phonebook",
+  "phonebook1": "Phonebook",
   "delete": "Delete",
   "edit": "Edit",
-  "deleteContact": "Are you sure you want to delete this contact?"
+  "deleteContact": "Are you sure you want to delete this contact?",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "contacts": "Contacts",
+  "number": "Number",
+  "addContact": "Add Contact",
+  "findContact": "Find contact"
 }

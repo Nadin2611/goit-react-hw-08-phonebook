@@ -20,7 +20,7 @@ export const Navigation = () => {
       {isLoggedIn && (
         <Link to="/contacts">
           <ContainerIcon>
-            <PhoneIphoneIcon /> Phonebook
+            <PhoneIphoneIcon /> {t('phonebook1')}
           </ContainerIcon>
         </Link>
       )}

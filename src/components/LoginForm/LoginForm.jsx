@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import {
   Form,
   FormContainer,
@@ -11,6 +12,7 @@ import { logIn } from '../../redux/auth/operations';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -29,19 +31,19 @@ export const LoginForm = () => {
       <Form onSubmit={handleSubmit}>
         <FormContainer>
           <Label>
-            Email
+            {t('email')}
             <Input type="email" name="email" required />
           </Label>
         </FormContainer>
 
         <FormContainer>
           <Label>
-            Password
+            {t('password')}
             <Input type="password" name="password" required />
           </Label>
         </FormContainer>
 
-        <LoginButton type="submit">Log In</LoginButton>
+        <LoginButton type="submit">{t('logIn1')}</LoginButton>
       </Form>
     </Container>
   );

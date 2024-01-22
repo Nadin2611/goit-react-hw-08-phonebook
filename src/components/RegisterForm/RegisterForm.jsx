@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 import {
   Form,
   FormContainer,
@@ -6,11 +8,12 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 import { Container } from 'components/Container.styled';
 import { LoginButton } from 'components/LoginForm/LoginForm.styled';
-import { useDispatch } from 'react-redux';
+
 import { register } from '../../redux/auth/operations';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -30,7 +33,7 @@ export const RegisterForm = () => {
       <Form onSubmit={handleSubmit} autoComplete="off">
         <FormContainer>
           <Label>
-            Name
+            {t('name')}
             <Input
               type="text"
               name="name"
@@ -46,7 +49,7 @@ export const RegisterForm = () => {
 
         <FormContainer>
           <Label>
-            Email
+            {t('email')}
             <Input
               type="email"
               name="email"
@@ -59,7 +62,7 @@ export const RegisterForm = () => {
 
         <FormContainer>
           <Label>
-            Password
+            {t('password')}
             <Input
               type="password"
               name="password"
@@ -72,7 +75,7 @@ export const RegisterForm = () => {
           </Label>
         </FormContainer>
 
-        <LoginButton type="submit">Register</LoginButton>
+        <LoginButton type="submit">{t('register2')}</LoginButton>
       </Form>
     </Container>
   );
