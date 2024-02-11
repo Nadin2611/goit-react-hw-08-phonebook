@@ -26,12 +26,12 @@ export const ContactList = () => {
 
   return (
     <List>
-      {filteredContacts.map(({ id, name, number }) => (
+      {filteredContacts.map(({ _id, name, number }) => (
         <ContactListItem
-          key={id}
+          key={_id}
           name={name}
           number={number}
-          onDelete={() => handleDelete(id)}
+          onDelete={() => handleDelete(_id)}
         >
           {name} {number}
         </ContactListItem>
