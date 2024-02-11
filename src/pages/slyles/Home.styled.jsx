@@ -18,7 +18,7 @@ export const Title = styled.h1`
 
 export const Text = styled.div`
   font-weight: 400;
-  max-width: 500px;
+  max-width: 700px;
   font-size: 32px;
   text-align: center;
 `;

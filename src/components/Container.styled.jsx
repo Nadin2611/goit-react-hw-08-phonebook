@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 500px;
+  width: 700px;
   margin: ${props => props.theme.spacing(16)} auto;
   padding: ${props => props.theme.spacing(5)};
   border: 7px solid ${props => props.theme.colors.green};
