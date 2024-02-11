@@ -5,6 +5,7 @@ import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useAuth } from '../../hooks/useAuth';
+import { theme } from '../../styles/theme';
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
@@ -23,13 +24,23 @@ export const AppBar = () => {
       <LanguageContainer>
         <LanguageSwitch
           onClick={() => changeLanguage('en')}
-          active={activeLanguage === 'en'}
+          style={{
+            color:
+              activeLanguage === 'en'
+                ? theme.colors.dark
+                : theme.colors.lightGray,
+          }}
         >
           En
         </LanguageSwitch>
         <LanguageSwitch
           onClick={() => changeLanguage('uk')}
-          active={activeLanguage === 'uk'}
+          style={{
+            color:
+              activeLanguage === 'uk'
+                ? theme.colors.dark
+                : theme.colors.lightGray,
+          }}
         >
           Ua
         </LanguageSwitch>

@@ -42,7 +42,6 @@ export const RegisterForm = () => {
               required
               placeholder="Name"
               title="Username can only contain letters"
-              pattern="[a-zA-Zа-яА-ЯІіЇїЄє ]+(([' \-][a-zA-Zа-яА-ЯІіЇїЄє ])?[a-zA-Zа-яА-ЯІіЇїЄє])+$"
             />
           </Label>
         </FormContainer>
@@ -55,7 +54,6 @@ export const RegisterForm = () => {
               name="email"
               required
               placeholder="name@gmail.com"
-              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
             />
           </Label>
         </FormContainer>
@@ -70,7 +68,6 @@ export const RegisterForm = () => {
               placeholder="*******"
               minLength={7}
               title="Minimum 7 characters, including numbers and symbols"
-              pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
             />
           </Label>
         </FormContainer>
